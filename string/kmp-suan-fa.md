@@ -44,20 +44,19 @@ if __name__ == '__main__':
     pattern_str = "abaabcaba"
     next = kmp(main_str, pattern_str)
     print(next)
-
 ```
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](https://github.com/1649759610/interview_coding/tree/e7461202f2a8c87ddd55e166a94d97365e69d722/.gitbook/assets/image%20%2812%29.png)
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](https://github.com/1649759610/interview_coding/tree/e7461202f2a8c87ddd55e166a94d97365e69d722/.gitbook/assets/image%20%281%29.png)
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](https://github.com/1649759610/interview_coding/tree/e7461202f2a8c87ddd55e166a94d97365e69d722/.gitbook/assets/image%20%287%29.png)
 
 ## KMP算法改进版
 
-![](../.gitbook/assets/image.png)
+![](https://github.com/1649759610/interview_coding/tree/e7461202f2a8c87ddd55e166a94d97365e69d722/.gitbook/assets/image.png)
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](https://github.com/1649759610/interview_coding/tree/e7461202f2a8c87ddd55e166a94d97365e69d722/.gitbook/assets/image%20%282%29.png)
 
 ```python
 def getNext(pattern_str):
@@ -79,7 +78,7 @@ def getNext(pattern_str):
             k = next[k]
 
     return next
-    
+
 def kmp(main_str, pattern_str):
     # 获取next数组
     next = getNext(pattern_str)
