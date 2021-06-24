@@ -23,3 +23,4 @@ class Solution:
         return creatBST(nums, 0, len(nums)-1)
 ```
 
+test
