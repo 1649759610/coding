@@ -1,7 +1,5 @@
 # 将有序数组转换为二叉搜索树
 
-![](../.gitbook/assets/image%20%286%29%20%281%29.png)
-
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
@@ -22,6 +20,4 @@ class Solution:
             return root
         return creatBST(nums, 0, len(nums)-1)
 ```
-
-
 

@@ -1,9 +1,5 @@
 # 2. 买卖股票的最佳时机 II
 
-![](../.gitbook/assets/image%20%2811%29.png)
-
-![](../.gitbook/assets/image%20%289%29%20%281%29.png)
-
 ```python
 import numpy as np
 
@@ -19,7 +15,7 @@ class Solution:
         for i in range(1, len(prices)):
             dp[i, 0] = max(dp[i-1, 0], dp[i-1, 1]+prices[i])
             dp[i, 1] = max(dp[i-1, 1], dp[i-1, 0]-prices[i])
-        
+
         return int(max(dp[len(prices)-1]))
 ```
 

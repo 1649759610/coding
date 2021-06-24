@@ -1,9 +1,5 @@
 # 1. 删除排序数组中的重复项
 
-![](../.gitbook/assets/image%20%284%29.png)
-
-![](../.gitbook/assets/image%20%283%29.png)
-
 ```python
 """
 设置前后两个指针：
@@ -25,9 +21,7 @@ class Solution:
                 nums[start]=nums[end]
                 end += 1
                 count += 1
-        
+
         return count
 ```
-
-
 
