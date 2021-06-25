@@ -2,8 +2,9 @@
 
 * [Initial page](README.md)
 * [Array](Array/README.md)
-  * [ 删除排序数组中的重复项](Array/delete_duplicated_item_in_array.md)
-  * [ 买卖股票的最佳时机 II](Array/stock2.md)
+  * [删除排序数组中的重复项](Array/delete_duplicated_item_in_array.md)
+  * [买卖股票的最佳时机 II](Array/stock2.md)
+  * [乘积最大子数组](Array/max_continus_product.md)
 * [String](String/README.md)
   * [KMP算法](String/kmp.md)
 * [Tree](Tree/README.md)
