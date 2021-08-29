@@ -19,7 +19,11 @@ Interview Coding
    找到数组中第K大的数字 <source/array/find_kmax_in_array>
    全排列 <source/array/permutation>
    全搜索 <source/array/basic_search> 
-   
+   乘积最大子数组 <source/array/max_product_sub_array> 
+   多数元素 <source/array/most_items_in_array>
+   移动零 <source/array/move_zero>  
+   背包问题 <source/array/bag>
+
 .. toctree::
    :maxdepth: 2
    :caption: 字符串
