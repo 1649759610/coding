@@ -62,5 +62,10 @@ Interview Coding
    :maxdepth: 2
    :caption: 图论
 
-   
+.. toctree::
+   :maxdepth: 2
+   :caption: 深度学习
+
+   TextCNN <source/deep_learning/textcnn.md>
+   Viterbi <source/deep_learning/viterbi.md>   
 

@@ -22,6 +22,8 @@ Interview Coding
    乘积最大子数组 <source/array/max_product_sub_array> 
    多数元素 <source/array/most_items_in_array>
    移动零 <source/array/move_zero>  
+   背包问题 <source/array/bag>
+
 .. toctree::
    :maxdepth: 2
    :caption: 字符串
@@ -60,5 +62,10 @@ Interview Coding
    :maxdepth: 2
    :caption: 图论
 
-   
+.. toctree::
+   :maxdepth: 2
+   :caption: 深度学习
+
+   TextCNN <source/deep_learning/textcnn.md>
+   Viterbi <source/deep_learning/viterbi.md>   
 
