@@ -32,7 +32,12 @@ Interview Coding
 .. toctree::
    :maxdepth: 2
    :caption: 堆,栈与队列
-   
+
+   有序数组中第k小的值 <source/stack_queue/kth_min_val_in_order_matrix>
+   前k个高频元素 <source/stack_queue/kth_high_frequency_item>
+   滑动窗口最大值 <source/stack_queue/max_val_slide_window>
+   逆波兰表达式 <source/stack_queue/rpn>   
+   最小栈 <source/stack_queue/min_stack>
 
 .. toctree::
    :maxdepth: 2
@@ -48,6 +53,8 @@ Interview Coding
    中序遍历 <source/tree/inorder_traveral>
    后序遍历 <source/tree/postorder_traveral>
    层次遍历 <source/tree/level_traveral>
+   最近公共祖先 <source/tree/recentAncestor>
+
 .. toctree::
    :maxdepth: 2
    :caption: 排序与检索
@@ -57,6 +64,9 @@ Interview Coding
 .. toctree::
    :maxdepth: 2
    :caption: 动态规划
+
+   最长连续序列 <source/dynamic_program/max_continuous_sequence>
+   
 
 .. toctree::
    :maxdepth: 2
