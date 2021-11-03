@@ -28,6 +28,8 @@ Interview Coding
    :maxdepth: 2
    :caption: 字符串
 
+   分割回文串 <source/string/split_palindrome>
+   分割单词 <source/string/word_break>
 
 .. toctree::
    :maxdepth: 2
