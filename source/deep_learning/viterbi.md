@@ -4,46 +4,46 @@
 
 import numpy as np
 
-def viterbi(emis, trans):
-    alpha = [[0,0,0]]
-    beta = [[-1,-1,-1]]
-    n_steps, n_labels=emis.shape[0], emis.shape[1]
-    for step_i in range(1, n_steps+1):
-        alpha_i = [0]*n_labels
-        beta_i = [-1]*n_labels
-        for label_i in range(0, n_labels):
-            if step_i==1:
-                tmp_score = emis[step_i - 1][label_i]
-            else:
-                tmp_score = alpha[step_i-1] + trans[:,label_i]+emis[step_i-1][label_i]
-            alpha_i[label_i] = np.max(tmp_score)
-            beta_i[label_i] = np.argmax(tmp_score)
+def viterbi(emissions, transition):
+    n_steps, n_labels = len(emissions), len(emissions[0])
+    # 以标签i结尾的所有路径中的最大路径的分数
+    alpha = np.zeros(shape=(n_steps, 2))
+    # 在step 0， 用emissions[0]进行初始化
+    alpha[0][0], alpha[0][1] = emissions[0][0], emissions[0][1]
 
-        alpha.append(alpha_i)
-        beta.append(beta_i)
+    # 以标签i结尾的所有路径中的最大的那条路径，前一个时刻的标签
+    beta = np.zeros(shape=(n_steps, 2), dtype=int)
+    # 在step 0 ， 用[-1, -1]进行初始化
+    beta[0][0], beta[0][1] = -1, -1
 
-    max_last_label = np.argmax(alpha[-1])
-    path = [max_last_label]
-    for beta_i in reversed(beta[2:]):
-        if beta_i[0]!=-1:
-            max_last_label = beta_i[max_last_label]
-            path.append(max_last_label)
-
-    while path:
-        print(f"{path.pop()} ", end="")
+    for step_i in range(1, n_steps):
+        for label_j in range(n_labels):
+            tmp_score = alpha[step_i - 1] + transition[:, label_j] + emissions[step_i][label_j]
+            # 记录信息
+            alpha[step_i][label_j] = np.max(tmp_score)
+            beta[step_i][label_j] = np.argmax(tmp_score)
 
 
-if __name__ == '__main__':
-    # assume that the num of label is 3, total step is 5,  so you can define the emis and trans as follows
-    n_labels = 2
-    n_steps = 3
-    emis = np.random.randn(n_steps, n_labels)
-    trans = np.random.randn(n_labels, n_labels)
-    print("emis:", emis)
-    print("trans:", trans)
+    # 解码序列，首先找出最后一步中，哪个标签对应的序列是最大的
+    max_label = np.argmax(alpha[-1])
+    path = [max_label]
+    for beta_i in reversed(beta):
+        if beta_i[0] == -1:
+            break
+        max_label = beta_i[max_label]
+        path.append(max_label)
 
-    viterbi(emis, trans)
+    return list(reversed(path))
 
+
+if __name__=="__main__":
+    emissions = [[0.82, 0.28], [0.36, 0.76], [0.65, 0.57]]
+    transition = [[0.1, 0.1], [0.1, 0.1]]
+    emissions = np.array(emissions)
+    transition = np.array(transition)
+
+    path = viterbi(emissions, transition)
+    print(path)
 
 
 ```

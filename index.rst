@@ -79,5 +79,6 @@ Interview Coding
    :caption: 深度学习
 
    TextCNN <source/deep_learning/textcnn.md>
+   前向算法 <source/deep_learning/forward_algorithm>
    Viterbi <source/deep_learning/viterbi.md>   
 
