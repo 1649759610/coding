@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Interview Coding'
+project = 'Coding Excise'
 copyright = 'milen'
 author = 'milen'
 
