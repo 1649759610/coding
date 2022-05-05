@@ -9,4 +9,5 @@
    前k个高频元素 <kth_high_frequency_item>
    滑动窗口最大值 <max_val_slide_window>
    逆波兰表达式 <rpn>
-   最小栈 <min_stack> 
+   最小栈 <min_stack>
+   水壶问题 <can_measure_water> 
