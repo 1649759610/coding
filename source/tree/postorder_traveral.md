@@ -39,3 +39,27 @@ class Tree(object):
             print(val, end=" ")
 
 ```
+
+
+
+```python 
+# 后续非递归解法2
+def postOrderTraveral2(root):
+    stack = [(root, 0)]
+    ans = []
+
+    while len(stack) > 0:
+        node, times = stack.pop()
+        if times == 0:
+            stack.append((node, 1))
+            if node.rchild:
+                stack.append((node.rchild, 0))
+            if node.lchild:
+                stack.append((node.lchild, 0))
+        else:
+            ans.append(node.val)
+
+    print(ans)
+
+
+```
