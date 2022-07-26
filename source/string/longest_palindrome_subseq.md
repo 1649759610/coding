@@ -18,6 +18,8 @@
 
 
 ```python
+# 解法1
+
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
         dp = [[0]*len(s) for i in range(len(s))]
@@ -32,6 +34,31 @@ class Solution:
                     dp[i][j] = max(dp[i+1][j], dp[i][j-1])
         
         return dp[0][len(s)-1]
+
+# 解法2
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left, right = 0, 0
+        n = len(s)
+        tmp_set = set()
+        max_len = 0
+
+        while left < n and right < n:
+            if s[right] not in tmp_set:
+                tmp_set.add(s[right])
+                max_len = max(max_len, right-left+1)
+                right += 1
+            else:
+                while left <= right and s[left]!=s[right]:
+                    tmp_set.remove(s[left])
+                    left += 1
+                tmp_set.remove(s[left])
+                left += 1
+
+        
+        return max_len
+                
 
 
 
